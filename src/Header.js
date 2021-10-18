@@ -1,15 +1,17 @@
+import Nav from "./Nav"
 
-const Header = () =>{
+
+const Header = ({nombre,apellido}) =>{
 
     return(
 
         <header className="headerC" id="headerI">
-            <h1>FitnessPlace</h1>
-            <nav>
-                <a href="#"> Inicio </a>
-                <a href="#"> Contacto </a>
-
-            </nav>
+            <h1>Dolce Ragazza</h1>
+            <p>Bienvenida {'Daniela'} {'Alvarez'}</p>
+            <span className="material-icons">
+               shopping_cart
+            </span>     
+           <Nav/>
         </header>
     )
 }
