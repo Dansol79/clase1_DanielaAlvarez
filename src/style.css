@@ -10,7 +10,6 @@ body{
 
 .headerC{
     background-color: rgb(201, 211, 163);
-    margin: 1.5em 0;
     display: flex;
     justify-content:space-around;
 
