@@ -1,12 +1,13 @@
 import  Header from "./Header"
-import ILContainer from "./ILContainer"
+import Main from "./Main"
 
 const App = () =>{
 
     return(
         <>
         < Header/>
-        <ILContainer/>
+        <Main/>
+       
         <footer className="footerU">
             <p>Armando un footer</p>
         </footer>
