@@ -5,12 +5,14 @@
 }
 
 body{
-    background-color: #fafafa;
+    background-image: url(/src/images/bgrosaC.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 .headerC{
     background-color: #d7ccc8;
-    box-shadow: gray 2px 2px 3px;
+    box-shadow: gray 3px 3px 5px;
     display: flex;
     justify-content:space-around;
 

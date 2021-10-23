@@ -4,7 +4,6 @@ import ItemCount from "./ItemCount"
 
 
 const Main = () =>{
-    
 
     return(
        <>
