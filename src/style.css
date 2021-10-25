@@ -5,9 +5,10 @@
 }
 
 body{
-    background-image: url(/src/images/bgrosaC.jpg);
+    background-image: url(bgrosaC.jpg);
     background-repeat: no-repeat;
     background-size:cover;
+    font-family:  'Peddana';
 }
 
 .headerC{
@@ -17,7 +18,7 @@ body{
     justify-content:space-around;
 
 }
-h1{
+.titleP{
  color: #503d09;
  
 }
@@ -25,6 +26,7 @@ h1{
     color: #503d09;
     font-size: 40px;
     text-align: center;  
+    margin-top: 1.5em;
 
 }
 .enlaces{
@@ -39,29 +41,83 @@ h1{
     margin: .5em;
     margin-top: 2em;
 }
-main{
+.secPrimera{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/* Estilo para componente Itenlist */
+.divCardD{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
+/* Estilos para componente ItemCount */
+.divIC{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content:space-around;
+    background-color: rgba(255, 192, 203, 0.404);
+    
+}
+.divBtn{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
 .contador{
     color: #503d09 ;
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
     margin-top: 2em;
+    text-align: center;
   
 }
 .contadorR, .contadorS{
     color: #503d09 ;
     border: black 1px solid;
+    border-radius: 50%;
     background-color: rgb(221, 221, 218);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 15%;
-    padding: .5em;
+    padding: .2em;
     margin-top: 1em;
     font-size: 20px;
 }
+/* Estilos para ItemList */
+.pLL{
+    margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+  color: #503d09;
+}
+.pL{
+    color: #503d09;
+    font-size: 25px;
+    margin-top: 1em;
+    text-align: center;
+}
+.divCard{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    background-color: rgba(255, 192, 203, 0.404);
+}
+.stiloimg{
+    width: 100%;
+    
+}
+
 .footerU{
     background-color: #d7ccc8;
     width: 100%;

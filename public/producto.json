@@ -1,0 +1,31 @@
+{
+  "collar": [
+    {
+      "id": 1,
+      "producto": "Collar Dolce",
+      "img": "./images/collar1.jpg"
+    },
+
+    {
+        "id": 2,
+        "producto": "Collar Franchesca",
+        "img":"./images/collar2.jpg"
+    },
+    {
+        "id": 3,
+        "producto": "Collar Mia Donna",
+        "img":"./images/collar3.jpg"
+    },
+    {
+        "id": 4,
+        "producto": "Collar Anneta ",
+        "img":"./images/collar4.jpg"
+    },
+    {
+        "id": 5,
+        "producto": "Collar Geovanna",
+        "img":"./images/collar5.jpg"
+    }
+]
+
+}

@@ -1,15 +1,17 @@
 import ILContainer from "./ILContainer"
-import ItemCount from "./ItemCount"
-
-
+import ItemList from "./ItemList"
 
 const Main = () =>{
 
     return(
        <>
+       <section className="secPrimera">
+       <div>
         <h2 className="dol">Dolce Ragazza</h2>
-        <ItemCount/>
+        </div>
+        <ItemList/>
         <ILContainer/>
+        </section>
        </>
     )
 }
