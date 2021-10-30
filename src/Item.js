@@ -9,7 +9,9 @@ const Item = () =>{
    useEffect(()=>{
        setTimeout(()=>{
         fetch("./producto.json")
+
        .then(res=>res.json())
+
        .then(data =>{
            setProducto(data.collar)
        })
@@ -28,9 +30,9 @@ const Item = () =>{
                 return( 
                     <>
                    <div className="divCard" key={item.id}>                      
-                                           <h3 className="pL" key={item.id}>{item.producto}</h3>
-                                            <img  src={item.img} className="stiloimg" key={item}></img>
-                                             <p key={item}>{item.descripcion}</p>
+                                            <h3 className="pL">{item.producto}</h3>
+                                            <img  src={item.img} alt="imagenCollar"className="stiloimg" ></img>
+                                             <p>{item.descripcion}</p>
                        <ItemCount/>
                     </div>
                    </>

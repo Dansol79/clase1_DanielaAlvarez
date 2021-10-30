@@ -5,7 +5,7 @@ import React, {useState} from "react"
 const ItemCount = () =>{
     const [contador, setContador] = useState(0)
     const stock = 5;
-    const min = 0;
+    const min = 1;
     const sumar = (() =>{
         if(contador < stock ){
             setContador(contador +1)

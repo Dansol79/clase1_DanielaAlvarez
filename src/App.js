@@ -7,7 +7,6 @@ const App = () =>{
         <>
         < Header/>
         <Main/>
-       
         <footer className="footerU">
             <p>Armando un footer</p>
         </footer>
