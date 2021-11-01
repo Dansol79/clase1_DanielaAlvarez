@@ -1,6 +1,6 @@
 import React, {useEffect,useState} from "react"
 import {Link} from "react-router-dom"
-import ItemCount from "./ItemCount";
+import ItemCount from "./components/ItemCount"
 
 
 
@@ -10,7 +10,7 @@ import ItemCount from "./ItemCount";
     useEffect(() => {
        
       const obtenerDatos = async () =>{
-         const data = await fetch("https://617c956d1eadc500171362cd.mockapi.io/articulos")
+         const data = await fetch("https://618006028bfae60017adf952.mockapi.io/articlos")
      
          const prod = await data.json()
 
@@ -36,12 +36,12 @@ import ItemCount from "./ItemCount";
                                   <li className="divCard" key={item.id}>
                                     <Link to={`/artSelec/${item.id}`}>
                                      
-                                      <h3 >{item.producto}</h3>
-                                       <img src={item.img}
+                                      <h3 >{item.name}</h3>
+                                       <img src={item.imagen}
                                        alt="imagPro"
                                        className="stiloimg"
                                       ></img> 
-                                       <p>$ {item.precio}</p>
+                                       <p>$ {item.price}</p>
                                       <ItemCount/>
                                      </Link>
                                       </li>

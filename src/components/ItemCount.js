@@ -23,7 +23,7 @@ const ItemCount = () =>{
         <h2>Stock</h2>
         <div className="divBtn">
         <button onClick={restar} className="material-icons  contadorR">remove</button>
-        <p className='contador'>{contador}</p>
+        <span className='contador'>{contador}</span>
         <button onClick={sumar} className="material-icons contadorS">add</button>
         </div>
         </div>
