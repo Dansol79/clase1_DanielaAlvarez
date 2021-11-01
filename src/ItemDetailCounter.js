@@ -1,48 +1,58 @@
 import React, {useEffect,useState} from "react"
+import {Link} from "react-router-dom"
 import ItemCount from "./ItemCount";
 
 
 
  const ItemDC = (()=>{
-   const [datos, setDatos] = useState([])
+   const [datos, setDatos] =useState([])
 
     useEffect(() => {
-      const resultado = fetch("https://fakestoreapi.com/products/1")
-        
+       
+      const obtenerDatos = async () =>{
+         const data = await fetch("https://617c956d1eadc500171362cd.mockapi.io/articulos")
+     
+         const prod = await data.json()
 
-        resultado.then((data)=>{
-           const nuevoProducto = data.json()
-            
-            return nuevoProducto
-        })
-        .then((nuevoProducto)=>{
-           setDatos(nuevoProducto)
-           console.log(nuevoProducto)
-         })
+         setDatos(prod)
+         console.log(prod)
+      } 
+       obtenerDatos()
+      
     },[])
-   
+
+     
+     
+        
     if(datos.length ===0){
         return <p>Cargando...</p>
 
     }else{
-                    return(
-                                <>
-                                <div className="divCard" key={datos.id}>
-                                <li >{datos.title}
-                                <img src={datos.image}
-                                 alt="imagPro"
-                                 className="stiloimg"
-                                 ></img>
-                                 <p>{datos.price}</p>
-                                 <ItemCount/>
-                                 </li>
-                                </div>
-                                </>
-                            )
-                       
+           return(
+                   <>
+                        { 
+                              datos.map( item => (
+                                   
+                                  <li className="divCard" key={item.id}>
+                                    <Link to={`/artSelec/${item.id}`}>
+                                     
+                                      <h3 >{item.producto}</h3>
+                                       <img src={item.img}
+                                       alt="imagPro"
+                                       className="stiloimg"
+                                      ></img> 
+                                       <p>$ {item.precio}</p>
+                                      <ItemCount/>
+                                     </Link>
+                                      </li>
+                                   
+                                  ) )
+                         } 
+                      </>
+                             )
                 }
              
-
+               
  })
 
  export default ItemDC;

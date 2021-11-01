@@ -3,10 +3,10 @@ import ItemDC from "./ItemDetailCounter"
 
 const ItemD = (() =>{
 return(
-    <ul>
-    <li className="divCardD">
+    <ul className="divCardD">
+   
         <ItemDC/>
-    </li>
+    
     </ul>
 )
 
