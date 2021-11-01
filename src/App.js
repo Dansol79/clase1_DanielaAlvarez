@@ -15,10 +15,7 @@ const App = () =>{
         < Header/>
         <Switch>
        
-       <Route path="/artSelec/:id">
-           Holaaaaaaa
-        <ArtSelec/>
-       </Route>
+       
         
 
 
@@ -26,10 +23,13 @@ const App = () =>{
         </Route>
         <Route path="/contacto"> <Contacto/> </Route>
         <Route path="/inicio"><Inicio/></Route>
-        
       
        </Switch>
-       
+
+      <Route path="/artSelec/:id">
+           Holaaaaaaa
+        <ArtSelec/>
+       </Route> 
       
         </Router>
 
