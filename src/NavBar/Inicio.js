@@ -2,7 +2,10 @@ import Main from "../Main"
 
 const Inicio = () =>{
     return(
-        <Main/>
+        <>
+        <p className="pLL">Soy el inicio</p>
+     
+        </>
 
     )
 }
