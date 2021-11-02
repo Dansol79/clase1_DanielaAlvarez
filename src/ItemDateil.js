@@ -3,11 +3,16 @@ import ItemDC from "./ItemDetailCounter"
 
 const ItemD = (() =>{
 return(
-    <ul className="divCardD">
+
+    <div>
+        <h2 className="dol">Dolce Ragazza</h2>
+
+        <ul className="divCardD">
    
         <ItemDC/>
     
     </ul>
+    </div>
 )
 
 })

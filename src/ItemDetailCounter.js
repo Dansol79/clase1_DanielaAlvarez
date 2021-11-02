@@ -1,6 +1,5 @@
 import React, {useEffect,useState} from "react"
 import {Link} from "react-router-dom"
-import ItemCount from "./components/ItemCount"
 
 
 
@@ -35,14 +34,13 @@ import ItemCount from "./components/ItemCount"
                                    
                                   <li className="divCard" key={item.id}>
                                     <Link to={`/artSelec/${item.id}`}>
-                                     
                                       <h3 className="pL" >{item.name}</h3>
                                        <img src={item.imagen}
                                        alt="imagPro"
                                        className="stiloimg"
                                       ></img> 
                                        <p className="pLL">$ {item.price}</p>
-                                      <ItemCount/>
+                                       <button className="btnCarrito"> Agregar al carrito</button>
                                      </Link>
                                       </li>
                                    

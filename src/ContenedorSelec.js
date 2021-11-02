@@ -30,15 +30,21 @@ const ArtSelec = () =>{
     console.log(articulo)
 
     return(
-        <li  className="divCardD" >
+      <>
+          <div>
+               <h2 className="dol">Dolce Ragazza</h2>
+            </div>      
+         <ul  className="divCard">
+           <li className="divCardD">
           <h3 className="pL" >{articulo.name}</h3>
            <img src={articulo.imagen}
            alt="imagPro"
-           className="stiloimg"
-          ></img> 
+           className="stiloimg"></img>
            <p className="pLL">$ {articulo.price}</p>
           <ItemCount/>
           </li>
+          </ul>
+          </>
          )
 }
 

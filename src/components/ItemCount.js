@@ -17,16 +17,20 @@ const ItemCount = () =>{
 
         }
     }) 
-    return(
+    return( 
         <>
-        <div className="divIC" >
-        <h2>Stock</h2>
-        <div className="divBtn">
-        <button onClick={restar} className="material-icons  contadorR">remove</button>
-        <span className='contador'>{contador}</span>
-        <button onClick={sumar} className="material-icons contadorS">add</button>
-        </div>
-        </div>
+            <div className="flexCenter">
+                <div className="contCarrito">
+            <span className="material-icons shoppingCart  btnCon"> shopping_cart</span>
+              </div>
+
+           <div className="contenedorContador" >
+                <button onClick={restar} className="material-icons botones  btnCon"> remove</button>
+                <span className='contador'>{contador}</span>
+                <button onClick={sumar} className="material-icons botones   btnCon ">  add </button>
+                </div>
+           </div>
+
         </>
     )
 }
