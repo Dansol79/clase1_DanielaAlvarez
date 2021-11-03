@@ -6,9 +6,9 @@ const Nav = () => {
        
         <>
         <nav>
+        <Link to="/inicio" className="enlaces">Inicio</Link>
        <Link to ="/productos" className="enlaces">Productos</Link>
        <Link to ="/contacto" className="enlaces">Contacto</Link>
-       <Link to="/inicio" className="enlaces">Inicio</Link>
        </nav>
         </>
        

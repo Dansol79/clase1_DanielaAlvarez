@@ -3,7 +3,7 @@ import  Header from "./Header";
 import Productos from "./NavBar/Productos";
 import Contacto from "./NavBar/Contacto";
 import Inicio from "./NavBar/Inicio";
-import ArtSelec from "./ContenedorSelec";
+import ImprDateil from "./ItemD";
 import ItemList from "./ItemList";
 
 
@@ -22,8 +22,7 @@ const App = () =>{
        </Switch>
 
       <Route path="/artSelec/:id">
-          
-        <ArtSelec/>
+        <ImprDateil/>
        </Route> 
       
         </Router>

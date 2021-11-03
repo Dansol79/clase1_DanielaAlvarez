@@ -1,4 +1,4 @@
-import ItemDC from "./ItemDetailCounter"
+import ItemDC from "./ItemDatailCounter"
 
 
 const ItemD = (() =>{
@@ -10,8 +10,7 @@ return(
         <ul className="divCardD">
    
         <ItemDC/>
-    
-    </ul>
+       </ul>
     </div>
 )
 

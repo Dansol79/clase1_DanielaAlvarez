@@ -31,9 +31,6 @@ const ArtSelec = () =>{
 
     return(
       <>
-          <div>
-               <h2 className="dol">Dolce Ragazza</h2>
-            </div>      
          <ul  className="divCard">
            <li className="divCardD">
           <h3 className="pL" >{articulo.name}</h3>

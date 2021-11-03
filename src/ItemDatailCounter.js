@@ -40,7 +40,7 @@ import {Link} from "react-router-dom"
                                        className="stiloimg"
                                       ></img> 
                                        <p className="pLL">$ {item.price}</p>
-                                       <button className="btnCarrito"> Agregar al carrito</button>
+                                       <button className="btnCarrito"> VER MAS...</button>
                                      </Link>
                                       </li>
                                    
