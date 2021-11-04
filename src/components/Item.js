@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 
 
 
- const ItemDC = (()=>{
+ const Item = (()=>{
    const [datos, setDatos] =useState([])
 
     useEffect(() => {
@@ -53,4 +53,4 @@ import {Link} from "react-router-dom"
                
  })
 
- export default ItemDC;
+ export default Item;

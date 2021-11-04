@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
-import ItemCount from "./components/ItemCount";
+import ItemCount from "./ItemCount";
 
 
 
-const ArtSelec = () =>{
+const ItemDateilConteiner = () =>{
     
     const {id} = useParams()
 
@@ -31,19 +31,19 @@ const ArtSelec = () =>{
 
     return(
       <>
-         <ul  className="divCard">
-           <li className="divCardD">
-          <h3 className="pL" >{articulo.name}</h3>
-           <img src={articulo.imagen}
-           alt="imagPro"
-           className="stiloimg"></img>
-           <p className="pLL">$ {articulo.price}</p>
-          <ItemCount/>
-          </li>
+          <ul  className="divCard">
+             <li className="divCardD">
+                <h3 className="pL" >{articulo.name}</h3>
+                <img src={articulo.imagen}
+                     alt="imagPro"
+                     className="stiloimg"></img>
+                <p className="pLL">$ {articulo.price}</p>
+                <ItemCount/>
+               </li>
           </ul>
           </>
          )
 }
 
 
-export default ArtSelec
+export default ItemDateilConteiner

@@ -7,10 +7,9 @@ const Main = () =>{
        <>
        <section className="secPrimera">
        <div>
-        <h2 className="dol">Dolce Ragazza</h2>
         </div>
-        <ItemList/>
-        <ILContainer/>
+         <ItemList/>
+         <ILContainer/>
         </section>
        </>
     )

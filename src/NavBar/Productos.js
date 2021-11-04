@@ -1,8 +1,9 @@
-import ItemDC from "../ItemDateil"
+// import Item from "../Item"
+import ItemList from "../components/ItemList"
 
 const Productos = () =>{
     return(
-        <ItemDC/> 
+        <ItemList/> 
     )
 }
 

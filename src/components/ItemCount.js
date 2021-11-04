@@ -29,6 +29,9 @@ const ItemCount = () =>{
                 <span className='contador'>{contador}</span>
                 <button onClick={sumar} className="material-icons botones   btnCon ">  add </button>
                 </div>
+                <div>
+                    <button className="btnCarrito">Agregar al carrito</button>
+                </div>
            </div>
 
         </>
