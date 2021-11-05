@@ -4,7 +4,6 @@ import Productos from "./NavBar/Productos";
 import Contacto from "./NavBar/Contacto";
 import Inicio from "./NavBar/Inicio";
 import ItemListContainer from "./components/ItemListContainer";
-// import ItemDetail from "./components/ItemDetail";
 import ItemDetailConteiner from "./components/ItemDetailContainer";
 
 const App = () => {
@@ -26,7 +25,7 @@ const App = () => {
         </Route>
       </Switch>
 
-      <Route path="/artSelec/:id">
+      <Route path="/articulo_Selec/:id">
         <ItemDetailConteiner />
       </Route>
     </Router>

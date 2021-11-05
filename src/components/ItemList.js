@@ -13,7 +13,7 @@ const ItemList = ( {datos})=>{
                         { datos.map( item => (
                                    
                                 <li  className="divCard" >
-                                   <Item key={item.id } datos={item}/>
+                                   <Item key={item.id} item={item}/>
                                 </li>
                                    
                         ) )} 
