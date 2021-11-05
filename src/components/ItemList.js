@@ -1,17 +1,28 @@
-import Item from "./Item"
+import Item from "./ItemListContainer"
 
-const ItemList = ()=>{
-    return( 
 
-        <div>
-            <h2 className="dol">Dolce Ragazza</h2>
 
-            <ul className="divCardD">
-            <Item/>
-           </ul>
-           
-        </div>
-    )    
+const ItemList = ( {datos})=>{
+    
+    if(datos.length ===0){
+        return <p>Cargando...</p>
+    
+    }else{
+           return(
+                   <>
+                        { 
+                              datos.map( datos => (
+                                   
+                                  <li className="divCard">
+                                        <Item key={datos.id } datos={datos}/>
+                                 </li>
+                                   
+                                  ) )
+                         } 
+                      </>
+                             )
+                }
+            
 
     
 }

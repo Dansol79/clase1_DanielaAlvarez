@@ -1,9 +1,9 @@
 // import Item from "../Item"
-import ItemList from "../components/ItemList"
+import Item from "../components/Item"
 
 const Productos = () =>{
     return(
-        <ItemList/> 
+        <Item/> 
     )
 }
 

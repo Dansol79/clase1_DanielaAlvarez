@@ -1,56 +1,22 @@
-import React, {useEffect,useState} from "react"
 import {Link} from "react-router-dom"
 
 
+const Item = ({datos}) =>{
+        return(
 
- const Item = (()=>{
-   const [datos, setDatos] =useState([])
+            <>
+                     <Link to={`/artSelec/  ${datos.id}`}>
+                     <h3 className="pL" >{datos.name}</h3>
+                      <img src={datos.imagen} alt="imagPro"  className="stiloimg" /> 
+                      <p className="pLL">$ {datos.price}</p>
+                     <button className="btnCarrito"> VER MAS...</button>
+                     </Link>
+            </>
+        )
 
-    useEffect(() => {
-       
-      const obtenerDatos = async () =>{
-         const data = await fetch("https://618006028bfae60017adf952.mockapi.io/articlos")
-     
-         const prod = await data.json()
 
-         setDatos(prod)
-         console.log(prod)
-      } 
-       obtenerDatos()
-      
-    },[])
 
-     
-     
-        
-    if(datos.length ===0){
-        return <p>Cargando...</p>
+}
 
-    }else{
-           return(
-                   <>
-                        { 
-                              datos.map( item => (
-                                   
-                                  <li className="divCard" key={item.id}>
-                                    <Link to={`/artSelec/${item.id}`}>
-                                      <h3 className="pL" >{item.name}</h3>
-                                       <img src={item.imagen}
-                                       alt="imagPro"
-                                       className="stiloimg"
-                                      ></img> 
-                                       <p className="pLL">$ {item.price}</p>
-                                       <button className="btnCarrito"> VER MAS...</button>
-                                     </Link>
-                                      </li>
-                                   
-                                  ) )
-                         } 
-                      </>
-                             )
-                }
-             
-               
- })
 
- export default Item;
+export default Item;

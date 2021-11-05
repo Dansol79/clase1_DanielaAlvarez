@@ -1,10 +1,11 @@
-import Main from "../components/Main"
+import Item from '../components/Item'
+
 
 const Inicio = () =>{
     return(
         <>
 
-        <Main/>
+        <Item/>
        
      
         </>

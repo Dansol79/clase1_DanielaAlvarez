@@ -1,20 +1,47 @@
+import { useParams } from "react-router-dom"
+import { useEffect, useState } from "react"
+import ItemDetail from "./ItemDetail"
 
- import ItemDateilConteiner from "./ItemDateilContainer.js.js"
 
-const ItemDateil = () =>{
+
+const ItemDetailConteiner = () =>{
+    
+    const {id} = useParams()
+
+    const [articulo, setArticulo] =useState([])
+
+  
+
+    useEffect(() => {
+      const obtenerDatos = async () =>{
+         const data = await fetch (`https://618006028bfae60017adf952.mockapi.io/articlos/${id}`)
+     
+         const arti = await data.json()
+   
+         console.log(arti)
+           setArticulo(arti)
+      } 
+      obtenerDatos();
+      
+    },[id])
+
+    
+
+    console.log(articulo)
+
     return(
-        <>
-        
-            <div>
-               <h2 className="dol">Dolce Ragazza</h2>
+      <>
+      
+             <div>
+                 <h2 className="dol">Dolce Ragazza</h2>
             </div>  
-          <div className="contenedorID">
-         <ItemDateilConteiner/>
-         </div>
-         <div className="contenedorID">
+             <div className="contenedorID">
+                  <ItemDetail articulo={articulo}/>
+            </div>
+            <div className="contenedorID">
               <h3 className="pL">Significado del oro rosa</h3>
               <p className="paragraph">El mineral oro rosa está vinculado con el amor debido a su tonalidad, que también se relaciona con los sentimientos del corazón. Muchas personas ven esta roca como un compromiso de amor y trasmite el mensaje de estar enamorados. Al mismo tiempo, es una muestra de buenos propósitos e intenciones para la vida.</p>
-          </div>
+            </div>
 
          <div className="contenedorID">
             <h3 className="pL">¿Qué es el oro rosa?</h3>
@@ -29,6 +56,8 @@ const ItemDateil = () =>{
 
         </>
     )
+       
 }
 
-export default ItemDateil
+
+export default ItemDetailConteiner
