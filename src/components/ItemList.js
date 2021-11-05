@@ -1,4 +1,4 @@
-import Item from "./ItemListContainer"
+import Item from "./Item"
 
 
 
@@ -10,20 +10,19 @@ const ItemList = ( {datos})=>{
     }else{
            return(
                    <>
-                        { 
-                              datos.map( datos => (
+                        { datos.map( item => (
                                    
-                                  <li className="divCard">
-                                        <Item key={datos.id } datos={datos}/>
-                                 </li>
+                                <li  className="divCard" >
+                                   <Item key={item.id } datos={item}/>
+                                </li>
                                    
-                                  ) )
-                         } 
+                        ) )} 
+                         
                       </>
                              )
                 }
             
-
+               
     
 }
 

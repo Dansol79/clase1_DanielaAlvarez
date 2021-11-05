@@ -8,7 +8,7 @@ const ItemDetailConteiner = () =>{
     
     const {id} = useParams()
 
-    const [articulo, setArticulo] =useState([])
+    const [articulo, setArticulo] =useState({})
 
   
 
@@ -36,7 +36,7 @@ const ItemDetailConteiner = () =>{
                  <h2 className="dol">Dolce Ragazza</h2>
             </div>  
              <div className="contenedorID">
-                  <ItemDetail articulo={articulo}/>
+                  <ItemDetail articulos={articulo}/>
             </div>
             <div className="contenedorID">
               <h3 className="pL">Significado del oro rosa</h3>

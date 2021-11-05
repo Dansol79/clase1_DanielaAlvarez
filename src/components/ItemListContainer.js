@@ -25,10 +25,10 @@ import ItemList from "./ItemList"
         
    return(
            <div>
-               <h2 className="dol">Dolce Ragazza</h2>
+               {/* <h2 className="dol">Dolce Ragazza</h2> */}
 
                <ul className="divCardD">
-                  <ItemList  datos={datos}/>
+                  <ItemList  datos={datos} />
                </ul>
    
             </div>

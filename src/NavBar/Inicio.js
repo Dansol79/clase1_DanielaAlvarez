@@ -1,13 +1,12 @@
-import Item from '../components/Item'
+import ItemListContainer from '../components/ItemListContainer'
 
 
 const Inicio = () =>{
     return(
         <>
-
-        <Item/>
+        
+        <ItemListContainer/>
        
-     
         </>
 
     )
