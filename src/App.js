@@ -4,7 +4,7 @@ import Productos from "./NavBar/Productos";
 import Contacto from "./NavBar/Contacto";
 import Inicio from "./NavBar/Inicio";
 import Item from "./components/Item";
-import ItemDetailConteiner from "./components/ItemDetailContainer";
+import ItemDetail from "./components/ItemDetail";
 
 
 const App = () =>{
@@ -22,7 +22,7 @@ const App = () =>{
        </Switch>
 
       <Route path="/artSelec/:id">
-        <ItemDetailConteiner/>
+        <ItemDetail/>
        </Route> 
       
         </Router>
