@@ -21,12 +21,9 @@ const ItemDetailConteiner = () =>{
            setArticulo(arti)
       } 
       obtenerDatos();
+
       
     },[id])
-
-    
-
-    console.log(articulo)
 
     return(
       <>
@@ -55,8 +52,8 @@ const ItemDetailConteiner = () =>{
 
         </>
     )
+  }
        
-}
 
 
 export default ItemDetailConteiner

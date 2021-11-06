@@ -33,10 +33,14 @@ a{
     text-decoration:none;
     
 }
+
+/* estilos de enlaces Nav y carrito */
+
+
 .enlaces{
     display: inline;
     margin: 1em 2em;
-    color: black;
+    color:#503d09;
     font-size: 20px;
 
 }

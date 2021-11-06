@@ -7,7 +7,7 @@ import ItemList from "./ItemList"
    const [datos, setDatos] =useState([])
 
     useEffect(() => {
-       
+      setTimeout(()=>{
       const obtenerDatos = async () =>{
          const data = await fetch("https://618006028bfae60017adf952.mockapi.io/articlos")
      
@@ -16,12 +16,11 @@ import ItemList from "./ItemList"
          setDatos(prod)
          console.log(prod)
       } 
+   
        obtenerDatos()
-      
+      },1000)
     },[])
-
-     
-     
+  
         
    return(
            <div>

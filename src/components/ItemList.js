@@ -5,7 +5,7 @@ import Item from "./Item"
 const ItemList = ( {datos})=>{
     
     if(datos.length ===0){
-        return <p>Cargando...</p>
+        return <p className="dol">Cargando...</p>
     
     }else{
            return(

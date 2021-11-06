@@ -2,21 +2,29 @@ import React, {useState} from "react"
 
 
 
-const ItemCount = () =>{
+const ItemCount = ({onAdd}) =>{
     const [contador, setContador] = useState(0)
-    const stock = 5;
-    const min = 1;
-    const sumar = (() =>{
-        if(contador < stock ){
-            setContador(contador +1)
-        }
-    }) 
-    const restar = (() =>{
-        if(contador > min){
-            setContador(contador -1)
 
+    const stock = 5
+    const min = 0
+    const sumar = () => {
+        if(contador < stock){
+            setContador(contador + 1)
         }
-    }) 
+    }
+
+    const restar = () => {
+        if(contador > min){
+            setContador(contador - 1)
+        }
+       
+    }
+
+    const confirmar = () => {
+        onAdd(contador)
+    }
+
+
     return( 
         <>
             <div className="flexCenter">
@@ -30,7 +38,7 @@ const ItemCount = () =>{
                 <button onClick={sumar} className="material-icons botones   btnCon ">  add </button>
                 </div>
                 <div>
-                    <button className="btnCarrito">Agregar al carrito</button>
+                    <button className="btnCarrito" onClick={confirmar}>Agregar al carrito</button>
                 </div>
            </div>
 
