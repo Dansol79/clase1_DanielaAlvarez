@@ -2,6 +2,10 @@ import ItemCount from "./ItemCount"
 
 const ItemDetail = ({ articulo }) => {
 
+  const carrito = () =>{
+      console.log('SOY EL FUTURO CARRITO' )
+  }
+
             return(
                 
                 <ul  className="divCard">
@@ -9,7 +13,8 @@ const ItemDetail = ({ articulo }) => {
                    <h3 className="pL" >{articulo.name}</h3>
                    <img src={articulo.imagen} alt="imagPro" className="stiloimg" />
                    <p className="pLL">$ {articulo.price}</p>
-                   <ItemCount/>
+
+                   <ItemCount  onAdd={carrito}/>
                   </li>
                </ul>
             

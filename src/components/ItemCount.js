@@ -20,9 +20,7 @@ const ItemCount = ({onAdd}) =>{
        
     }
 
-    const confirmar = () => {
-        onAdd(contador)
-    }
+    
 
 
     return( 
@@ -38,7 +36,7 @@ const ItemCount = ({onAdd}) =>{
                 <button onClick={sumar} className="material-icons botones   btnCon ">  add </button>
                 </div>
                 <div>
-                    <button className="btnCarrito" onClick={confirmar}>Agregar al carrito</button>
+                    <button className="btnCarrito" onClick={onAdd}>Agregar al carrito</button>
                 </div>
            </div>
 
