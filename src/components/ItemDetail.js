@@ -1,29 +1,32 @@
 import ItemCount from "./ItemCount"
+import { useHistory } from "react-router-dom"
+import { useContext } from "react"
+import { contexto } from "../context/cartContext"
 
 const ItemDetail = ({ articulo }) => {
+  
+  const { push } = useHistory();
+  
+  const {agregarArticulo} = useContext(contexto)
+ 
 
-  const carrito = () =>{
-      console.log('SOY EL FUTURO CARRITO' )
-  }
+  const onAdd = (cantidad) => {
+    agregarArticulo(cantidad, articulo)
 
-            return(
-                
-                <ul  className="divCard">
-                   <li className="divCardD">
-                   <h3 className="pL" >{articulo.name}</h3>
-                   <img src={articulo.imagen} alt="imagPro" className="stiloimg" />
-                   <p className="pLL">$ {articulo.price}</p>
+    push("/cart");
+  };
 
-                   <ItemCount  onAdd={carrito}/>
-                  </li>
-               </ul>
-            
-            )
-}
-   
+  return (
+    <ul className="divCard">
+      <li className="divCardD">
+        <h3 className="pL">{articulo.name}</h3>
+        <img src={articulo.imagen} alt="imagPro" className="stiloimg" />
+        <p className="pLL">$ {articulo.price}</p>
 
+        <ItemCount onAdd={onAdd}/>
+      </li>
+    </ul>
+  );
+};
 
-        
-
-
-export default ItemDetail
+export default ItemDetail;
