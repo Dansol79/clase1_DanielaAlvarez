@@ -14,7 +14,6 @@ import ItemList from "./ItemList"
          const prod = await data.json()
 
          setDatos(prod)
-         console.log(prod)
       } 
    
        obtenerDatos()

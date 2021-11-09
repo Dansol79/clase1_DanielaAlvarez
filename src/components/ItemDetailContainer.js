@@ -17,7 +17,6 @@ const ItemDetailConteiner = () =>{
      
          const arti = await data.json()
    
-         console.log(arti)
            setArticulo(arti)
       } 
       obtenerDatos();
