@@ -16,16 +16,11 @@ export const CustomProvider = ({children}) =>{
     }
 
     const remover = id =>{
-		if(window.confirm("¿Quieres suspender el producto?")){
-			cart.forEach((item, index)=>{
-				if(item.id === id){
-					item.cantidad = 1;
-					cart.splice(index, 1)
-				}
-			})
-            setCart([...cart])
-		}
-	}
+
+        const newCart = cart.filter(item => item.articulo.id !== id)
+        setCart(newCart)
+    }
+
 
 
 

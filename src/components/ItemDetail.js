@@ -8,11 +8,10 @@ const ItemDetail = ({ articulo }) => {
   const { push } = useHistory();
   
   const {agregarArticulo} = useContext(contexto)
- 
 
   const onAdd = (cantidad) => {
     agregarArticulo(cantidad, articulo)
-
+   
     push("/cart");
   };
 

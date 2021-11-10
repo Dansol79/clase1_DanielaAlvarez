@@ -10,11 +10,11 @@ const Cart = () =>{
     const vaciarCarrito = ()=>{
         clear()
     }
-    const removerItem = ()=>{
+     const removerItem = ()=>{
         remover()
     
-        
     }
+
     return(
         <>
         <div>
@@ -29,16 +29,16 @@ const Cart = () =>{
                 <p className="pLL">{item.cantidad}</p>
                 <img src={item.articulo.imagen} alt="imagPro" className="stiloimg" />
                 <p className="pLL"> $ {item.articulo.price}</p>
-                <button className="btnCarrito" onClick={removerItem}>X</button>
+                <button className="btnCarrito" onClick={ () =>removerItem(item.id)}>X</button>
                
             </li>
             </ul>
-             <button  className="btnCarrito"  onClick ={vaciarCarrito}> Eliminar</button>
          </div>
          ))}
-       
-        </>
-
+        <div>
+        <button  className="btnCarrito"  onClick ={vaciarCarrito}> Vaciar Carrito</button>
+        </div>
+     </>
     )
 }
 
