@@ -15,7 +15,7 @@ export const CustomProvider = ({children}) =>{
         setCart(copia_cart)
     }
 
-    const remover = id =>{
+    const remover = (id) =>{
 
         const newCart = cart.filter(item => item.articulo.id !== id)
         setCart(newCart)

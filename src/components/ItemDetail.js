@@ -15,6 +15,7 @@ const ItemDetail = ({ articulo }) => {
     push("/cart");
   };
 
+  
   return (
     <ul className="divCard">
       <li className="divCardD">
