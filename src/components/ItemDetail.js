@@ -20,9 +20,11 @@ const ItemDetail = ({ articulo }) => {
     <ul className="divCard">
       <li className="divCardD">
         <h3 className="pL">{articulo.name}</h3>
-        <img src={articulo.imagen} alt="imagPro" className="stiloimg" />
         <p className="pLL">$ {articulo.price}</p>
-
+        <img src={articulo.imagen} alt="imagPro" className="stiloimg" />
+        <div>
+        <p className="pLL">{articulo.descripcion}</p>
+        </div>
         <ItemCount onAdd={onAdd}/>
       </li>
     </ul>

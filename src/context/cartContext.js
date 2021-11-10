@@ -15,11 +15,21 @@ export const CustomProvider = ({children}) =>{
         setCart(copia_cart)
     }
 
-    const remover = (articulo) =>{
-        const copia_cart = cart.filter(item => item.id !== articulo)
-        setCart(copia_cart)
-        }
+    const remover = id =>{
+		if(window.confirm("¿Quieres suspender el producto?")){
+			cart.forEach((item, index)=>{
+				if(item.id === id){
+					item.cantidad = 1;
+					cart.splice(index, 1)
+				}
+			})
+            setCart([...cart])
+		}
+	}
 
+
+
+        
     const clear = () =>{
         setCart([])
     }
