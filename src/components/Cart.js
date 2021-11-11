@@ -23,9 +23,9 @@ const Cart = () =>{
          <ul className="divCard">
            <li  className="divCardD" key={item.id}>
               <h3 className="pL">{item.articulo.name}</h3>
-                <p className="pLL">{item.cantidad}</p>
                 <img src={item.articulo.imagen} alt="imagPro" className="stiloimg" />
-                <p className="pLL"> $ {item.articulo.price}</p>
+                <p className="pLL">  Total: {item.articulo.price * item.cantidad} </p>
+                <p className="pLL">Cant: {item.cantidad}</p>
                 <button className="btnCarrito" onClick={ () =>remover(item.articulo.id)}>X</button>
                
             </li>

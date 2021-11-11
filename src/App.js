@@ -2,7 +2,6 @@ import { BrowserRouter, BrowserRouter as Router, Route, Switch } from "react-rou
 import Header from "./components/Header";
 import Productos from "./NavBar/Productos";
 import Contacto from "./NavBar/Contacto";
-import Inicio from "./NavBar/Inicio";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailConteiner from "./components/ItemDetailContainer";
 import Cart from "./components/Cart";
@@ -20,8 +19,6 @@ const App = () => {
         <Route path="/" exact>  <ItemListContainer /> </Route>
        
         <Route path="/productos"> <Productos /> </Route>
-        
-        <Route path="/inicio"> <Inicio /> </Route>
         
         <Route path="/contacto"> <Contacto /> </Route>
        
