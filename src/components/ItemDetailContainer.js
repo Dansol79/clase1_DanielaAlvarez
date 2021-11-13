@@ -26,11 +26,11 @@ const ItemDetailConteiner = () =>{
 
     return(
       <>
-      
              <div>
                  <h2 className="dol">Dolce Ragazza</h2>
              </div>  
-             <div className="contenedorID">
+             <div className="contendDetail">
+             <div>
                   <ItemDetail articulo={articulo} />
             </div>
             <div className="contenedorID">
@@ -48,7 +48,7 @@ const ItemDetailConteiner = () =>{
                 <p  className="paragraph">El oro de color rosa remonta sus primeros usos a la Edad Media, donde se empleaba para la alquimia. Posteriormente, sobre todo en el siglo XIX, empezó a utilizarse en joyas rusas que con el paso del tiempo se extendieron a lo largo del planeta.En la actualidad, una pieza de oro con matices rosados es muy buscada para fabricar anillos, alianzas, pulseras, collares, relojes y prácticamente todo tipo de prenda.
                Sea como sea, sus orígenes todavía son ambiguos, aunque se supone que este material se debe a la fusión química de metales pesados con el hierro estelar. Como consecuencia, no se crea de forma natural en la tierra. Los científicos y alquimistas han tratado de producirlo con metales inferiores, pero es imposible.</p>
             </div>
-
+            </div>
         </>
     )
   }

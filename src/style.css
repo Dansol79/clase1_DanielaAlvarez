@@ -161,7 +161,6 @@ a{
     width: 100%;
     background-color:#cbaa9944;
     border: solid 2px  #cbaa99c2;
-    border-radius: 10px;
 
 }
 .stiloimg{
@@ -170,6 +169,13 @@ a{
     
 }
 /* Contenedor ItemD */
+.contendDetail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
 .contenedorID{
     width: 80%;
     text-align: justify;
@@ -178,8 +184,69 @@ a{
     border: solid 2px  #cbaa99c2;
 }
 
-.footerU{
-    background-color: #d7ccc8;
-    width: 100%;
-    height: 100px;
+.divImg{
+   width: 100%;
+   height: 200px;
+   margin: 2em;
+}
+
+.divDetail{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 1em;
+    background-color:#cbaa993f;
+    border: solid 2px  #cbaa99c2;
+}
+
+.divDesdcripcion{
+    width: 50%;
+    text-align: justify;
+    margin: 1em 7em;
+    padding: 1em 1em 2em;
+    border: solid 1px  #cbaa99c2;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px  gray ;
+}
+
+/* Estilos para carrito */
+
+.tabla{
+    width: 80%;
+    background-color:#cbaa9944;
+    border : solid 2px #cbaa99c2;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto; 
+    margin-bottom: 1em;
+    margin-top: 2em;
+    padding: 1em 1em;
+  
+  
+  }
+  
+
+.imgTabla{
+    width: 30%;
+    height: 150px;
+}
+.btnVaciar{
+    width: 60%;
+    margin-top: 1em;
+    margin-left: 18em;
+    border:none;
+    padding: .5em;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color:#cbaa9944;
+}
+.paragraphTabla{
+    color: #503d09;
+    font-size: 20px;
+    margin-top: 1em;
+    text-align: center;
 }

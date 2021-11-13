@@ -1,5 +1,5 @@
 import { BrowserRouter, BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Header from "./components/Header";
+import Nav from "./NavBar/Nav";
 import Productos from "./NavBar/Productos";
 import Contacto from "./NavBar/Contacto";
 import ItemListContainer from "./components/ItemListContainer";
@@ -14,7 +14,7 @@ const App = () => {
     <BrowserRouter>
     <CustomProvider>
    
-      <Header />
+      <Nav/>
       <Switch>
         <Route path="/" exact>  <ItemListContainer /> </Route>
        

@@ -31,10 +31,6 @@ const ItemCount = ({onAdd}) =>{
     return( 
         <>
             <div className="flexCenter">
-                <div className="contCarrito">
-            <span className="material-icons shoppingCart  btnCon"> shopping_cart</span>
-              </div>
-
            <div className="contenedorContador" >
                 <button onClick={restar} className="material-icons botones  btnCon"> remove</button>
                 <span className='contador'>{contador}</span>

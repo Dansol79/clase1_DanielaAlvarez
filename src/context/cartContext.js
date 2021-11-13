@@ -3,29 +3,24 @@ import { createContext, useState } from "react"
 export const contexto = createContext()
 export const { Provider } = contexto
 
-export const CustomProvider = ({children}) =>{
-   
+export const CustomProvider = ({ children }) => {
 
-    const [cart, setCart] = useState([]) 
 
-    const agregarArticulo = (cantidad, articulo) =>{
+    const [cart, setCart] = useState([])
 
-        const copia_cart = [...cart, {cantidad, articulo}]
+    const agregarArticulo = (cantidad, articulo) => {
 
+        const copia_cart = [...cart, { cantidad, articulo }]
         setCart(copia_cart)
     }
 
-    const remover = (id) =>{
+    const remover = (id) => {
 
         const newCart = cart.filter(item => item.articulo.id !== id)
         setCart(newCart)
     }
 
-
-
-
-        
-    const clear = () =>{
+    const clear = () => {
         setCart([])
     }
 
@@ -37,11 +32,11 @@ export const CustomProvider = ({children}) =>{
 
 
     }
-    return(
+    return (
 
-        <Provider value= {valor_del_contexto} >
+        <Provider value={valor_del_contexto} >
             {children}
-            
+
         </Provider>
     )
 }

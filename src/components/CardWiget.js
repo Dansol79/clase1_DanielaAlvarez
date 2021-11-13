@@ -1,17 +1,17 @@
-import { useContext } from 'react'
-import {contexto} from '../context/cartContext'
-
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { contexto } from "../context/cartContext";
 
 const CardWiget = () => {
+  const { cart } = useContext(contexto);
 
-  const {cart} = useContext(contexto)
-  
-  
   return (
-    <div className="enlaces">
-      <span className="material-icons">shopping_cart</span>
-      {cart.length}
-    </div>
+    <Link to="/cart">
+      <div className="enlaces">
+        <span className="material-icons">shopping_cart</span>
+        {cart.length}
+      </div>
+    </Link>
   );
 };
 
