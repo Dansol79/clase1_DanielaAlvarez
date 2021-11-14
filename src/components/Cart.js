@@ -10,46 +10,62 @@ const Cart = () => {
     clear();
   };
 
-  return (
-    <>
-      <div>
+  if(cart.length === 0){
+    return (
+      <div className="cart">
         <h2 className="dol">Dolce Ragazza</h2>
+        <h3 className="pL">Carrito de compras</h3>
+        <p className="pLL">No hay productos en el carrito</p>
       </div>
-      <table className="tabla">
-        <thead>
-          <tr>
-            <th className="paragraphTabla">Producto</th>
-            <th className="paragraphTabla">Nombre</th>
-            <th className="paragraphTabla">Precio</th>
-            <th className="paragraphTabla">Cantidad</th>
-          </tr>
-
-        </thead>
-        <tbody >
-
-          {cart.map(item => (
-            <tr key={item.id}>
-              <td><img src={item.articulo.imagen} alt={item.articulo.imagen} className="imgTabla" /></td>
-              <td className="paragraphTabla">{item.articulo.name}</td>
-              <td className="paragraphTabla"> Total: {item.articulo.price * item.cantidad}</td>
-              <td className="paragraphTabla">{item.cantidad}</td>
-              <td><button className="btnCarrito" onClick={() => remover(item.articulo.id)}>X</button></td>
+    )
+  }else{
+    return (
+      <>
+        <div>
+          <h2 className="dol">Dolce Ragazza</h2>
+        </div>
+        <table className="tabla">
+          <thead>
+            <tr>
+              <th className="paragraphTabla">Producto</th>
+              <th className="paragraphTabla">Nombre</th>
+              <th className="paragraphTabla">Precio</th>
+              <th className="paragraphTabla">Cantidad</th>
             </tr>
+  
+          </thead>
+          <tbody >
+  
+            {cart.map(item => (
+              <tr key={item.id}>
+                <td><img src={item.articulo.imagen} alt={item.articulo.imagen} className="imgTabla" /></td>
+                <td className="paragraphTabla">{item.articulo.name}</td>
+                <td className="paragraphTabla"> Total: {item.articulo.price * item.cantidad}</td>
+                <td className="paragraphTabla">{item.cantidad}</td>
+                <td><button className="btnCarrito" onClick={() => remover(item.articulo.id)}>X</button></td>
+              </tr>
+  
+            ))}
+  
+  
+          </tbody>
+  
+        </table>
+        <div className="divBtns">
+          <button className="btnVaciar" onClick={vaciarCarrito}> Vaciar Carrito </button>
+          <button className="btnVaciar"> Comprar </button>
+          <div>
+          <h3 className="paragraphTabla">Total: {cart.reduce((acc, item) => acc + item.articulo.price * item.cantidad, 0)}</h3>
+          </div>
+          </div>
 
-          ))}
+  
+      </>
+    );
+  
 
+  }
 
-        </tbody>
-
-      </table>
-      <div>
-        <h3 className="paragraphTabla">Total: {cart.reduce((acc, item) => acc + item.articulo.price * item.cantidad, 0)}</h3>
-        <button className="btnVaciar" onClick={vaciarCarrito}> Vaciar Carrito </button>
-        <button className="btnVaciar"> Comprar </button>
-        </div>;
-
-    </>
-  );
 };
 
 export default Cart;
