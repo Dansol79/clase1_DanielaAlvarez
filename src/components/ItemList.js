@@ -3,6 +3,7 @@ import Item from "./Item"
 
 
 const ItemList = ( {datos})=>{
+    console.log(datos)
     
     if(datos.length ===0){
         return <p className="dol">Cargando...</p>

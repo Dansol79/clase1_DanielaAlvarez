@@ -1,24 +1,35 @@
 import React, {useEffect,useState} from "react"
+import { firestore } from "../firebase/firebase"
 import ItemList from "./ItemList"
 
 
 
- const Item = (()=>{
+ const ItemListContainer = (()=>{
+
    const [datos, setDatos] =useState([])
 
-    useEffect(() => {
-      setTimeout(()=>{
-      const obtenerDatos = async () =>{
-         const data = await fetch("https://618006028bfae60017adf952.mockapi.io/articlos")
-     
-         const prod = await data.json()
+   const arrArticulo = []
 
-         setDatos(prod)
-      } 
-   
-       obtenerDatos()
-      },1000)
-    },[])
+    useEffect(() => {
+       
+      const db = firestore
+      const collection =  db.collection("articulo")
+
+      const promesa = collection.get()
+
+       promesa
+         .then(documento =>{
+            documento.forEach(doc =>{
+              arrArticulo.push(doc.data())
+            })
+            setDatos(arrArticulo)
+         })
+         .catch(()=>{
+            console.log("hubo un error")
+         })
+              
+      },[])
+  
   
         
    return(
@@ -34,4 +45,4 @@ import ItemList from "./ItemList"
                
  })
 
- export default Item;
+ export default ItemListContainer;
