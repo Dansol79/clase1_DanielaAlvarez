@@ -1,48 +1,51 @@
-import React, {useEffect,useState} from "react"
+import React, { useEffect, useState } from "react"
 import { firestore } from "../firebase/firebase"
 import ItemList from "./ItemList"
 
 
 
- const ItemListContainer = (()=>{
+const ItemListContainer = (() => {
 
-   const [datos, setDatos] =useState([])
+   const [datos, setDatos] = useState([])
 
-   const arrArticulo = []
 
-    useEffect(() => {
-       
+   useEffect(() => {
+
       const db = firestore
       const collection =  db.collection("articulo")
 
-      const promesa = collection.get()
+      collection
+         .get()
+         .then((querySnapshot) => {
+            if (querySnapshot.size === 0) {
+               console.log("No results!");
+             }
 
-       promesa
-         .then(documento =>{
-            documento.forEach(doc =>{
-              arrArticulo.push(doc.data())
-            })
-            setDatos(arrArticulo)
+             setDatos(
+               querySnapshot.docs.map((doc) => {
+                  return { id: doc.id, ...doc.data() }
+               })
+            );
          })
-         .catch(()=>{
-            console.log("hubo un error")
+         .catch((error) => {
+            console.log("Error getting documents: ", error);
          })
-              
-      },[])
-  
-  
-        
-   return(
-           <div>
-                <h2 className="dol">Dolce Ragazza</h2> 
 
-               <ul className="divCardD">
-                  <ItemList  datos={datos} />
-               </ul>
-   
-            </div>
+   }, [])
+
+
+
+   return (
+      <div>
+         <h2 className="dol">Dolce Ragazza</h2>
+
+         <ul className="divCardD">
+            <ItemList datos={datos} />
+         </ul>
+
+      </div>
    )
-               
- })
 
- export default ItemListContainer;
+})
+
+export default ItemListContainer;

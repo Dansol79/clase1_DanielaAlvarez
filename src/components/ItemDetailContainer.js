@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
+import {firestore} from '../firebase/firebase'
 import ItemDetail from "./ItemDetail"
 
 
@@ -12,14 +13,41 @@ const ItemDetailConteiner = () =>{
   
 
     useEffect(() => {
-      const obtenerDatos = async () =>{
-         const data = await fetch (`https://618006028bfae60017adf952.mockapi.io/articlos/${id}`)
+      const db = firestore
+
+      const itemCollection = db.collection("articulo")
+
+      const consulta = itemCollection.doc(id)
+      console.log(consulta)
+
+      
+      const promesa = consulta.get()
+
+      promesa
+            .then((documento) =>{
+
+              const data = documento.data()
+              console.log(data)
+
+              setArticulo(data) 
+
+
+
+            })
+            .catch(() =>{
+              console.log("hubo un error")
+            })
+          
+
+       
+      // const obtenerDatos = async () =>{
+      //    const data = await fetch (`https://618006028bfae60017adf952.mockapi.io/articlos/${id}`)
      
-         const arti = await data.json()
+      //    const arti = await data.json()
    
-           setArticulo(arti)
-      } 
-      obtenerDatos();
+      //      setArticulo(arti)
+      // } 
+      // obtenerDatos();
 
       
     },[id])
