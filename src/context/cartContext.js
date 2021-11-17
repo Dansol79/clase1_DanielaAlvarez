@@ -10,7 +10,7 @@ export const CustomProvider = ({ children }) => {
 
     const agregarArticulo = (cantidad, articulo) => {
 
-        const existe = cart.find(item => item.articulo.id === articulo.id)
+        const existe = cart.find(item => item.articulo.name === articulo.name)
 
         if(!existe){
             const copia_cart = [...cart, { cantidad, articulo }]
@@ -18,7 +18,7 @@ export const CustomProvider = ({ children }) => {
         }else{
             const existe_cart = cart.map((item) =>{
                 
-                return item.articulo.id === articulo.id ? { cantidad: item.cantidad + cantidad, articulo } : item
+                return item.articulo.name === articulo.name ? { cantidad: item.cantidad + cantidad, articulo } : item
                
             })
             setCart(existe_cart)

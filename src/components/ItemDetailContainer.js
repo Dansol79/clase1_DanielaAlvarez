@@ -30,26 +30,11 @@ const ItemDetailConteiner = () =>{
               console.log(data)
 
               setArticulo(data) 
-
-
-
             })
             .catch(() =>{
               console.log("hubo un error")
             })
-          
 
-       
-      // const obtenerDatos = async () =>{
-      //    const data = await fetch (`https://618006028bfae60017adf952.mockapi.io/articlos/${id}`)
-     
-      //    const arti = await data.json()
-   
-      //      setArticulo(arti)
-      // } 
-      // obtenerDatos();
-
-      
     },[id])
 
     return(
