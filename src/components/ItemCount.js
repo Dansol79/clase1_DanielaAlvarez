@@ -5,7 +5,7 @@ import React, {useState} from "react"
 const ItemCount = ({onAdd}) =>{
 
 
-    const [contador, setContador] = useState(0)
+    const [contador, setContador] = useState(1)
 
     const stock = 5
     const min = 0

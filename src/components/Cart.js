@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { contexto } from "../context/cartContext";
+import {Link} from 'react-router-dom'
 
 const Cart = () => {
   const { cart } = useContext(contexto);
@@ -10,12 +11,14 @@ const Cart = () => {
     clear();
   };
 
+
+  
+
   if(cart.length === 0){
     return (
       <div className="cart">
         <h2 className="dol">Dolce Ragazza</h2>
-        <h3 className="pL">Carrito de compras</h3>
-        <p className="pLL">No hay productos en el carrito</p>
+        <h3 className="pL">No hay productos en el carrito</h3>
       </div>
     )
   }else{
@@ -42,7 +45,7 @@ const Cart = () => {
                 <td className="paragraphTabla">{item.articulo.name}</td>
                 <td className="paragraphTabla"> Total: {item.articulo.price * item.cantidad}</td>
                 <td className="paragraphTabla">{item.cantidad}</td>
-                <td><button className="btnCarrito" onClick={() => remover(item.articulo.id)}>X</button></td>
+                <td><button className="btnCarrito" onClick={() => remover(item.articulo.name)}>X</button></td>
               </tr>
   
             ))}
@@ -53,10 +56,14 @@ const Cart = () => {
         </table>
         <div className="divBtns">
           <button className="btnVaciar" onClick={vaciarCarrito}> Vaciar Carrito </button>
+          <Link to="/login"   className="btnVaciar" >
           <button className="btnVaciar"> Comprar </button>
+          </Link>
           <div>
           <h3 className="paragraphTabla">Total: {cart.reduce((acc, item) => acc + item.articulo.price * item.cantidad, 0)}</h3>
           </div>
+          </div>
+          <div>
           </div>
 
   

@@ -18,7 +18,6 @@ const ItemDetailConteiner = () =>{
       const itemCollection = db.collection("articulo")
 
       const consulta = itemCollection.doc(id)
-      console.log(consulta)
 
       
       const promesa = consulta.get()
@@ -27,7 +26,6 @@ const ItemDetailConteiner = () =>{
             .then((documento) =>{
 
               const data = documento.data()
-              console.log(data)
 
               setArticulo(data) 
             })

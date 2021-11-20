@@ -6,23 +6,29 @@ import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailConteiner from "./components/ItemDetailContainer";
 import Cart from "./components/Cart";
 import { CustomProvider } from "./context/cartContext";
+import Login from "./components/form/Login";
+
 
 
 
 const App = () => {
   return (
+
+  
+
     <BrowserRouter>
     <CustomProvider>
    
       <Nav/>
       <Switch>
         <Route path="/" exact>  <ItemListContainer /> </Route>
-       
+        
         <Route path="/productos"> <Productos /> </Route>
         
         <Route path="/contacto"> <Contacto /> </Route>
        
         <Route path="/cart" component={Cart}></Route>
+        <Route path="/login" ><Login/> </Route>
       </Switch>
      
       <Route path="/articulo_Selec/:id"> <ItemDetailConteiner />  </Route>

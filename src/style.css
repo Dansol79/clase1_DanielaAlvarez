@@ -60,11 +60,11 @@ a{
 
 .divCardD{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   justify-items: center;
   align-items: center;
   justify-content: space-evenly;
-  gap: 2em;
+  gap: 4em;
   padding: 16px;
 
 }
@@ -94,15 +94,21 @@ a{
 }
 .btnCarrito{
     width: 80%;
-    margin: 1em 2em;;
+    margin: 1em 2em ;
     padding: .5em;
     border-radius: 5px;
     border:none;
     font-size: 14px;
     background-color:#cbaa9944;
+    box-shadow:   #cbaa99 -3px -3px -5px;
+}
+
+.btnCarrito:hover{
+    /* background-color: #cbaa99; */
+    box-shadow:  #cbaa99  3px 3px 5px;
+                 
 }
 .contCarrito {
-  
     margin: auto;
   }
   .contador {
@@ -161,6 +167,8 @@ a{
     width: 100%;
     background-color:#cbaa9944;
     border: solid 2px  #cbaa99c2;
+    box-shadow: gray 3px 3px 5px;
+    border-radius: 5px;
 
 }
 .stiloimg{
@@ -191,7 +199,7 @@ a{
 }
 
 .divDetail{
-    width: 70%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -204,12 +212,15 @@ a{
 }
 
 .divDesdcripcion{
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 60%;
     text-align: justify;
     margin: 1em 7em;
     padding: 1em 1em 2em;
     border: solid 1px  #cbaa99c2;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 2px 2px 3px  gray ;
 }
 
@@ -218,13 +229,14 @@ a{
 .tabla{
     width: 80%;
     background-color:#cbaa9944;
-    border : solid 2px #cbaa99c2;
+    /* border : solid 1px #cbaa99c2; */
     text-align: center;
     margin-right: auto;
     margin-left: auto; 
     margin-bottom: 1em;
     margin-top: 2em;
     padding: 1em 1em;
+    border-radius: 5px;
   
   
   }
@@ -256,4 +268,76 @@ a{
     justify-content: space-around;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+/* Estilos para formulario */
+
+.login-container{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10em;
+    margin-bottom: 2em;
+    /* background-color:#cbaa9944; */
+    border: solid 1px  #cbaa99c2;
+    box-shadow: gray 2px 2px 3px;
+    border-radius: 5px;
+}
+
+.login-input{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    margin-top: 1.2em;
+    margin-bottom: 1em;
+}
+
+.input_login{
+    width: 80%;
+    height: 2em;
+    border: none;
+    border-radius: 5px;
+    background-color:transparent;
+    padding: .4em;
+    border: 1px solid #cbaa99c2;
+}
+.label_login{
+    color: #503d09;
+    font-size: 15px;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.login-button{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.btn_login{
+    width: 30%;
+    border:none;
+    padding: .8em;
+    border-radius: 5px;
+    font-size: 12px;
+    background-color:#cbaa9944;
+}
+
+.error{
+    color: red;
+    display: block;
+    font-size: 14px;
+    text-align: center;
 }

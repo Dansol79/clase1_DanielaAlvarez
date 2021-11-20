@@ -17,10 +17,7 @@ const ItemListContainer = (() => {
       collection
          .get()
          .then((querySnapshot) => {
-            if (querySnapshot.size === 0) {
-               console.log("No results!");
-             }
-
+           
              setDatos(
                querySnapshot.docs.map((doc) => {
                   return { id: doc.id, ...doc.data() }
