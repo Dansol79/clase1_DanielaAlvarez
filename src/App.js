@@ -2,8 +2,8 @@ import { BrowserRouter, BrowserRouter as Router, Route, Switch } from "react-rou
 import Nav from "./NavBar/Nav";
 import Productos from "./NavBar/Productos";
 import Contacto from "./NavBar/Contacto";
-import ItemListContainer from "./components/ItemListContainer";
-import ItemDetailConteiner from "./components/ItemDetailContainer";
+import ItemListContainer from "./components/items/ItemListContainer";
+import ItemDetailConteiner from "./components/detail/ItemDetailContainer";
 import Cart from "./components/Cart";
 import { CustomProvider } from "./context/cartContext";
 import Login from "./components/form/Login";

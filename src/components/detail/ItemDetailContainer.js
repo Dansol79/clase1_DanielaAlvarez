@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
-import {firestore} from '../firebase/firebase'
+import {firestore} from '../../firebase/firebase'
 import ItemDetail from "./ItemDetail"
+import Contenedor from "../../Contenedor"
 
 
 const ItemDetailConteiner = () =>{
@@ -38,7 +39,7 @@ const ItemDetailConteiner = () =>{
     return(
       <>
              <div>
-                 <h2 className="dol">Dolce Ragazza</h2>
+               <Contenedor />
              </div>  
              <div className="contendDetail">
              <div>

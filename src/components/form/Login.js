@@ -1,3 +1,4 @@
+import "./login.css"
 import { useState } from "react"
 import { useContext } from "react";
 import { contexto } from "../../context/cartContext";
@@ -9,8 +10,8 @@ import {firestore} from '../../firebase/firebase'
 const Login = () => {
 
     const {cart} = useContext(contexto);
+    const {clear}=useContext(contexto);
     const[id, setId] =useState('')
-    
     const [compra, setCompra] = useState({
         nombre: "",
         apellido: "",
@@ -47,7 +48,9 @@ const Login = () => {
 
         }else{
             setError(false)
-            
+            setTimeout(()=>{
+                clear()
+            }, 1000) 
         }
         const datos={
             nombre: compra.nombre,
@@ -83,7 +86,7 @@ const Login = () => {
             <h1 className="pL">Tu compra se realizo con exito</h1>
                 <p className="pLL">Nombre: {nombre}</p>
                 <p className="pLL">Apellido: {apellido}</p>
-                <p className="pLL">Orden de compra # {id} </p>
+                <p className="pLL">Orden de compra: # {id} </p>
                
             </>
         )

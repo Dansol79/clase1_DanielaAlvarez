@@ -33,7 +33,8 @@ const Cart = () => {
               <th className="paragraphTabla">Producto</th>
               <th className="paragraphTabla">Nombre</th>
               <th className="paragraphTabla">Precio</th>
-              <th className="paragraphTabla">Cantidad</th>
+              <th className="paragraphTabla">Cant.</th>
+              <th className="paragraphTabla">Sub.Total</th>
             </tr>
   
           </thead>
@@ -43,8 +44,10 @@ const Cart = () => {
               <tr key={item.id}>
                 <td><img src={item.articulo.imagen} alt={item.articulo.imagen} className="imgTabla" /></td>
                 <td className="paragraphTabla">{item.articulo.name}</td>
-                <td className="paragraphTabla"> Total: {item.articulo.price * item.cantidad}</td>
+                <td className="paragraphTabla">{item.articulo.price}</td>
                 <td className="paragraphTabla">{item.cantidad}</td>
+                <td className="paragraphTabla">{item.articulo.price * item.cantidad}</td>
+
                 <td><button className="btnCarrito" onClick={() => remover(item.articulo.name)}>X</button></td>
               </tr>
   

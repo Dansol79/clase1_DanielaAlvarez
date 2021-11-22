@@ -10,6 +10,7 @@ body{
 }
 
 .headerC{
+    width: 100%;
     height: 60px;
     background-color:#cbaa99;
     box-shadow: gray 3px 3px 5px;
@@ -150,7 +151,7 @@ a{
 .pL{
     color: #503d09;
     font-size: 27px;
-    margin-top: 1em;
+    margin: 1em 0;
     text-align: center;
 }
 .paragraph{
@@ -192,36 +193,34 @@ a{
     border: solid 2px  #cbaa99c2;
 }
 
-.divImg{
-   width: 100%;
-   height: 200px;
-   margin: 2em;
+.imgen_dateil{
+    width: 100%;
+    height: 350px;
 }
 
 .divDetail{
     width: 80%;
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
     justify-content: center;
+     align-items: center;
     margin-left: auto;
     margin-right:auto;
     margin-top: 1em;
     background-color:#cbaa993f;
-    border: solid 2px  #cbaa99c2;
+    box-shadow: 2px 2px 4px  #838181c2;
 }
 
-.divDesdcripcion{
+
+.div_desdcripcion{
+    width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    width: 60%;
+    flex-wrap: nowrap;
+    align-items: center;
     text-align: justify;
-    margin: 1em 7em;
-    padding: 1em 1em 2em;
-    border: solid 1px  #cbaa99c2;
-    border-radius: 5px;
-    box-shadow: 2px 2px 3px  gray ;
+    margin: 1em;
+    padding: 1em;
 }
 
 /* Estilos para carrito */
@@ -229,7 +228,7 @@ a{
 .tabla{
     width: 80%;
     background-color:#cbaa9944;
-    /* border : solid 1px #cbaa99c2; */
+    border : solid 1px #cbaa99c2;
     text-align: center;
     margin-right: auto;
     margin-left: auto; 
@@ -238,13 +237,11 @@ a{
     padding: 1em 1em;
     border-radius: 5px;
   
-  
   }
-  
 
 .imgTabla{
-    width: 30%;
-    height: 150px;
+    width: 40%;
+    height: 200px;
 }
 .btnVaciar{
     width: 20%;
@@ -258,6 +255,7 @@ a{
     color: #503d09;
     font-size: 20px;
     margin-top: 1em;
+    padding: 0 2em;
     text-align: center;
 }
 
@@ -270,74 +268,87 @@ a{
     margin-right: auto;
 }
 
+/* Estilos para contacto */
 
-/* Estilos para formulario */
+.divContacto{
+    width: 100%;
+    margin-top: 2em;
+}
 
-.login-container{
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+.imgContacto{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.divContacto3{
+    width: 35%;
+    position: absolute;
+    bottom: 0em;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.paragraph_contacto{
+    color: #503d09;
+    padding: 1em;
+    font-size: 20px;
+    margin-top: 1em;
+    text-align: justify;
+}
+.divIcons{
+    width: 68%;
+    margin: 1em auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.p_icons{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    font-size: 50px;
+    margin-top: 1em;
+   background-color: transparent;
+    color: #cbaa99c2;
+
+}
+
+.paragraph_icons{
+    color: #503d09;
+    font-size: 15px;
+    margin-top: 2em;
+    align-items: center;
+}
+
+
+.divIcons_paragraph{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin-top: 2em;
+    align-items: center;
+}
+.contenedor_home{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 10em;
     margin-bottom: 2em;
-    /* background-color:#cbaa9944; */
-    border: solid 1px  #cbaa99c2;
-    box-shadow: gray 2px 2px 3px;
-    border-radius: 5px;
 }
 
-.login-input{
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+.doll{
+    width: 100%;
+    font-size: 50px;
+    color: #503d09;  
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content:space-around;
-    margin-top: 1.2em;
-    margin-bottom: 1em;
+    position: absolute;
+    justify-content: center;
 }
 
-.input_login{
-    width: 80%;
-    height: 2em;
-    border: none;
-    border-radius: 5px;
-    background-color:transparent;
-    padding: .4em;
-    border: 1px solid #cbaa99c2;
-}
-.label_login{
-    color: #503d09;
-    font-size: 15px;
-    margin-top: 1em;
-    text-align: center;
-}
-
-.login-button{
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-.btn_login{
-    width: 30%;
-    border:none;
-    padding: .8em;
-    border-radius: 5px;
-    font-size: 12px;
-    background-color:#cbaa9944;
-}
-
-.error{
-    color: red;
-    display: block;
-    font-size: 14px;
-    text-align: center;
-}
