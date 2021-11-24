@@ -88,7 +88,7 @@ const Login = () => {
                 <h1 className="pL">Tu compra se realizo con exito</h1>
                 <p className="pLL"> {nombre} - {apellido}</p>
                 <p className="pLL">Orden de compra: # {id} </p>
-                <p className="pLL">Gracias</p>
+                <p className="pLL">Gracias por su compra</p>
             </div>
             </>
         )
