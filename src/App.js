@@ -6,7 +6,6 @@ import ItemListContainer from "./components/items/ItemListContainer";
 import ItemDetailConteiner from "./components/detail/ItemDetailContainer";
 import Cart from "./components/Cart";
 import { CustomProvider } from "./context/cartContext";
-import Login from "./components/form/Login";
 
 
 
@@ -28,7 +27,6 @@ const App = () => {
         <Route path="/contacto"> <Contacto /> </Route>
        
         <Route path="/cart" component={Cart}></Route>
-        <Route path="/login" ><Login/> </Route>
       </Switch>
      
       <Route path="/articulo_Selec/:id"> <ItemDetailConteiner />  </Route>

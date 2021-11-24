@@ -1,11 +1,17 @@
 import { useContext } from "react";
+import Login from "./form/Login";
 import { contexto } from "../context/cartContext";
-import {Link} from 'react-router-dom'
+import { useState } from "react";
 
 const Cart = () => {
   const { cart } = useContext(contexto);
   const { clear } = useContext(contexto);
   const { remover } = useContext(contexto);
+  const [showLogin, setShowLogin] = useState(false);
+
+  !showLogin && <Cart/>
+  showLogin && <Login/>
+
 
   const vaciarCarrito = () => {
     clear();
@@ -59,9 +65,9 @@ const Cart = () => {
         </table>
         <div className="divBtns">
           <button className="btnVaciar" onClick={vaciarCarrito}> Vaciar Carrito </button>
-          <Link to="/login"   className="btnVaciar" >
-          <button className="btnVaciar"> Comprar </button>
-          </Link>
+         
+          <button className="btnVaciar" onClick={()=>setShowLogin(true)} > Comprar </button>
+        
           <div>
           <h3 className="paragraphTabla">Total: {cart.reduce((acc, item) => acc + item.articulo.price * item.cantidad, 0)}</h3>
           </div>

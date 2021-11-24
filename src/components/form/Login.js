@@ -83,11 +83,13 @@ const Login = () => {
         return(
           
             <>
-            <h1 className="pL">Tu compra se realizo con exito</h1>
-                <p className="pLL">Nombre: {nombre}</p>
-                <p className="pLL">Apellido: {apellido}</p>
+            <h2 className="dol">Dolde Ragazza</h2>
+            <div className="div_ticket">            
+                <h1 className="pL">Tu compra se realizo con exito</h1>
+                <p className="pLL"> {nombre} - {apellido}</p>
                 <p className="pLL">Orden de compra: # {id} </p>
-               
+                <p className="pLL">Gracias</p>
+            </div>
             </>
         )
         
@@ -95,7 +97,7 @@ const Login = () => {
         }else{    
            return (
         <>
-            <form onSubmit={eventCita} className="login-container">
+            <form onSubmit={eventCita} className="login-container" id="comprar">
                 <div className="login-input">
                     <label className="label_login">Nombre</label>
                     <input type="text"

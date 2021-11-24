@@ -2,8 +2,6 @@ import home from './images/home.jpg';
 
 const Contenedor = () => {
 
-  
-
     return(
        
              <div className="contenedor_home">
