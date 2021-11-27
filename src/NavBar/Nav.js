@@ -5,9 +5,9 @@ const Nav = () => {
   return (
     <>
       <header>
-        <nav className="headerC" id="headerI">
+        <nav className="contenedor_nav" id="headerI">
           <Link to="/">
-            <span className="titleP">Dolce Ragazza</span>
+            <span className="titulo_nav">Dolce Ragazza</span>
           </Link>
           <Link to="/productos" className="enlaces">
             Productos

@@ -4,6 +4,7 @@ import Productos from "./NavBar/Productos";
 import Contacto from "./NavBar/Contacto";
 import ItemListContainer from "./components/items/ItemListContainer";
 import ItemDetailConteiner from "./components/detail/ItemDetailContainer";
+import Footer from "./footer/Footer";
 import Cart from "./components/Cart";
 import { CustomProvider } from "./context/cartContext";
 
@@ -30,7 +31,9 @@ const App = () => {
       </Switch>
      
       <Route path="/articulo_Selec/:id"> <ItemDetailConteiner />  </Route>
-  
+    
+      <Footer/>
+    
     </CustomProvider>
     </BrowserRouter>
   );

@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom"
+import "./styloItems.css"
 
 
 const Item = ({ item}) =>{
@@ -7,10 +8,10 @@ const Item = ({ item}) =>{
 
             <>
                      <Link to={`/articulo_Selec/${item.id}`}>
-                     <h3 className="pL" >{ item.name}</h3>
                       <img src={ item.imagen} alt="imagPro"  className="stiloimg" /> 
-                      <p className="pLL">$ { item.price}</p>
-                     <button className="btnCarrito"> VER MAS...</button>
+                      <h3 className="titulo_item" >{ item.name}</h3>
+                      <p className="paragraph_item">$ { item.price}</p>
+                      <button className="boton_vermas"> VER MAS...</button>
                      </Link>
             </>
         )

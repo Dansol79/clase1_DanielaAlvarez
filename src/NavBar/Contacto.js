@@ -3,9 +3,9 @@ import contacto from "../images/contacto4.jpg";
 const Contacto = () => {
   return (
     <>
-      <h2 className="dol">Dolce Ragazza</h2>
+      <h2 className="titulo_principal">Dolce Ragazza</h2>
       <di>
-      <di className="divContacto3">
+        <di className="div_contacto">
           <p className="paragraph_contacto">
             Atención al cliente DOLCE RAGAZZA a su servicio Ninguna pregunta es
             demasiado insignificante y ninguna petición es demasiado grande para
@@ -16,29 +16,29 @@ const Contacto = () => {
           </p>
         </di>
 
-        <div className="divContacto">
-          <img src={contacto} alt={contacto} className="imgContacto"></img>
+        <div className="div_contenedor">
+          <img src={contacto} alt={contacto} className="imagen_contacto"></img>
         </div>
-      </di>
-      <div className="divContacto2">
-        <h2 className="pL">Contacte con nosotros</h2>
-        <p className="pLL">Atencion al cliente</p>
-    <div className="divIcons">
-        <div className="divIcons_paragraph">
-            <p className="material-icons p_icons">whatsapp</p>
+      </di> 
+      <div >
+        <h2 className="titulo_contacto">Contacte con nosotros</h2>
+        <p className="paragraph_contacto">Atencion al cliente</p>
+        <div className="div_icons">
+          <div className="divIcons_paragraph">
+            <p className="material-icons stylo_icons">whatsapp</p>
             <p className="paragraph_icons"> 654 732 728</p>
-            </div>
-        <div className="divIcons_paragraph">
-            <p class="material-icons p_icons">diamond</p>
+          </div>
+          <div className="divIcons_paragraph">
+            <p class="material-icons stylo_icons">diamond</p>
             <p className="paragraph_icons">Consulte con expertos en oro y diamantes</p>
-         </div>
-    </div>
-    <div className="divIcons_paragraph">
-        <p className="pLL">Nuestros horario de atencion:</p>
-        <p className="paragraph_icons">Lunes-Sabados de 8:00 a 19:00 Hs. </p>
-        <p className="paragraph_icons">Dic: Lavalle 357 CABA</p>
-    </div>
-    </div>
+          </div>
+        </div>
+        <div className="divIcons_paragraph">
+          <p className="pLL">Nuestros horario de atencion:</p>
+          <p className="paragraph_icons">Lunes-Sabados de 8:00 a 19:00 Hs. </p>
+          <p className="paragraph_icons">Dic: Lavalle 357 CABA</p>
+        </div>
+      </div>
     </>
   );
 };

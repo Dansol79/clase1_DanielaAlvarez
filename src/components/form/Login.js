@@ -1,4 +1,5 @@
 import "./login.css"
+import Slider from "../../slider/Slider";
 import { useState } from "react"
 import { useContext } from "react";
 import { contexto } from "../../context/cartContext";
@@ -83,12 +84,12 @@ const Login = () => {
         return(
           
             <>
-            <h2 className="dol">Dolde Ragazza</h2>
+            <h2 className="titulo_principal">Dolde Ragazza</h2>
             <div className="div_ticket">            
-                <h1 className="pL">Tu compra se realizo con exito</h1>
-                <p className="pLL"> {nombre} - {apellido}</p>
-                <p className="pLL">Orden de compra: # {id} </p>
-                <p className="pLL">Gracias por su compra</p>
+                <h1 className="titulo_ticket">Tu compra se realizó con éxito</h1>
+                <p className="paragraph_ticket"> {nombre} - {apellido}</p>
+                <p className="paragraph_ticket">Orden de compra: # {id} </p>
+                <p className="paragraph_ticket">Gracias por tu compra</p>
             </div>
             </>
         )
@@ -97,6 +98,9 @@ const Login = () => {
         }else{    
            return (
         <>
+            <div>
+                <Slider/>
+            </div>
             <form onSubmit={eventCita} className="login-container" id="comprar">
                 <div className="login-input">
                     <label className="label_login">Nombre</label>

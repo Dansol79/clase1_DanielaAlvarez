@@ -1,3 +1,4 @@
+import "./styloDetail.css"
 import ItemCount from "../ItemCount";
 import { useHistory } from "react-router-dom";
 import { useContext } from "react";
@@ -24,11 +25,11 @@ const ItemDetail = ({ articulo }) => {
       </div>
       <div className="div_desdcripcion">
         <div>
-        <h3 className="pL">{articulo.name}</h3>
+        <h3 className="titulo_detail">{articulo.name}</h3>
         </div>
         <p className="descripcion">{articulo.descripcion}</p>
         <div>
-          <p className="pLL">$ {articulo.price}</p>
+          <p className="paragraph_precio">$ {articulo.price}</p>
           <ItemCount onAdd={onAdd} />
         </div>
 

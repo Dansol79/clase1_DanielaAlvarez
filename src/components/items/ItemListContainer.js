@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { firestore } from "../../firebase/firebase"
-import Contenedor from "../../Contenedor"
+import Slider from "../../slider/Slider"
 import ItemList from "./ItemList"
 
 
@@ -35,7 +35,9 @@ const ItemListContainer = (() => {
 
    return (
       <div>
-         <Contenedor />
+         <div>
+            <Slider/>
+         </div>
          <ul className="divCardD">
             <ItemList datos={datos} />
          </ul>

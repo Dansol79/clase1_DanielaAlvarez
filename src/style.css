@@ -1,126 +1,121 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color:rgba(37, 33, 37, 0.05);
-    font-family:  'Peddana';
+body {
+    background-color: rgba(37, 33, 37, 0.05);
+    font-family: 'Peddana';
 }
 
-.headerC{
+.contenedor_nav {
     width: 100%;
     height: 60px;
-    background-color:#cbaa99;
+    background-color: #cbaa99;
     box-shadow: gray 3px 3px 5px;
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
 
 }
-.titleP{
- color: #503d09;
- font-size: 2em;
- 
+
+.titulo_nav{
+    color: #503d09;
+    font-size: 25px;
 }
-.dol{
+
+.titulo_principal {
     color: #503d09;
     font-size: 40px;
-    text-align: center;  
-    margin-top: 1.5em;
+    text-align: center;
+    margin: 1em 0;
 
 }
-a{
-    text-decoration:none;
-    
-}
+
+ a {
+    text-decoration: none;
+
+} 
 
 /* estilos de enlaces Nav y carrito */
 
 
 .enlaces{
+    text-decoration: none;
     display: inline;
     margin: 1em 2em;
-    color:#503d09;
+    color: #503d09;
     font-size: 20px;
 
 }
-.listasD{
-    list-style: none;
-    margin: .5em;
-    margin-top: 2em;
-}
-.secPrimera{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-/* Estilo para componente Itenlist */
-
-
-.divCardD{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  justify-items: center;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 4em;
-  padding: 16px;
-
-}
-
 /* Estilos para componente ItemCount */
-.divIC{
+.divIC {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content:space-around;
-    
+    align-content: space-around;
+
 }
-.divBtn{
-    
+
+.divBtn {
+
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-evenly;
     align-items: baseline;
 }
-.contador{
+
+.contador {
     color: #a38677;
-     font-size: 30px;
+    font-size: 30px;
     text-align: center;
     text-align: center;
-  
+
 }
-.btnCarrito{
+
+.btnCarrito {
     width: 80%;
-    margin: 1em 2em ;
+    color: #503d09;
+    display: block;
+    margin: 1em auto;
+    ;
     padding: .5em;
     border-radius: 5px;
-    border:none;
+    border: none;
     font-size: 14px;
-    background-color:#cbaa9944;
-    box-shadow:   #cbaa99 -3px -3px -5px;
+    background-color: #cbaa9944;
+    box-shadow: #cbaa99 3px 3px 5px;
 }
 
-.btnCarrito:hover{
-    /* background-color: #cbaa99; */
-    box-shadow:  #cbaa99  3px 3px 5px;
-                 
+.btnCarrito:hover {
+    box-shadow: #cbaa99 -3px -3px -5px;
 }
+
+
+.btnCarrito:hover {
+    box-shadow: #cbaa99 3px 3px 5px;
+}
+
 .contCarrito {
     margin: auto;
-  }
-  .contador {
+}
+
+.contador {
     font-size: 24px;
 
-  }
-  .btnCon{
-    color:#b3988b;
+}
+
+.btn_count {
+    width: 25%;
+    border: none;
+    background-color: #cbaa9944;
+    color: #503d09;
+    box-shadow: 2px 2px 3px #b3988b;
     font-size: 23px;
 
-  }
+}
 
 .flexCenter {
     display: flex;
@@ -128,130 +123,50 @@ a{
     flex-direction: column;
     padding-bottom: 10px;
     margin: auto;
-  }
+}
 
-.contenedorContador {
+.contenedor_contador{
     display: flex;
     justify-content: space-evenly;
     text-align: center;
     width: 150px;
     margin: 0 auto;
     height: 30px;
-  }
-
-/* Estilos para ItemList */
-.pLL{
-    text-align: center;
-  margin-top: 1em;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 22px;
-  color: #503d09;
-}
-.pL{
-    color: #503d09;
-    font-size: 27px;
-    margin: 1em 0;
-    text-align: center;
-}
-.paragraph{
-    color: #503d09;
-    font-size: 17px;
-    margin-top: 1em;
-}
-.divCard{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color:#cbaa9944;
-    border: solid 2px  #cbaa99c2;
-    box-shadow: gray 3px 3px 5px;
-    border-radius: 5px;
-
-}
-.stiloimg{
-    width: 100%;
-    height: 250px;
-    
-}
-/* Contenedor ItemD */
-.contendDetail{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
 }
 
-.contenedorID{
-    width: 80%;
-    text-align: justify;
-    margin: 1em 7em;
-    padding: 1em 1em 2em;
-    border: solid 2px  #cbaa99c2;
-}
-
-.imgen_dateil{
-    width: 100%;
-    height: 350px;
-}
-
-.divDetail{
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-     align-items: center;
-    margin-left: auto;
-    margin-right:auto;
-    margin-top: 1em;
-    background-color:#cbaa993f;
-    box-shadow: 2px 2px 4px  #838181c2;
-}
-
-
-.div_desdcripcion{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    text-align: justify;
-    margin: 1em;
-    padding: 1em;
-}
+ 
 
 /* Estilos para carrito */
 
-.tabla{
+.tabla {
     width: 80%;
-    background-color:#cbaa9944;
-    border : solid 1px #cbaa99c2;
+    background-color: #cbaa9944;
+    border: solid 2px #cbaa99c2;
     text-align: center;
     margin-right: auto;
-    margin-left: auto; 
+    margin-left: auto;
     margin-bottom: 1em;
     margin-top: 2em;
     padding: 1em 1em;
     border-radius: 5px;
-  
-  }
 
-.imgTabla{
+}
+
+.imagen_cart {
     width: 40%;
     height: 200px;
 }
-.btnVaciar{
+
+.boton_vaciar {
     width: 20%;
-    border:none;
+    border: none;
     padding: .2em;
     border-radius: 5px;
     font-size: 12px;
-    background-color:#cbaa9944;
+    background-color: #cbaa9944;
 }
-.paragraphTabla{
+
+.paragraph_tabla {
     color: #503d09;
     font-size: 20px;
     margin-top: 1em;
@@ -259,7 +174,7 @@ a{
     text-align: center;
 }
 
-.divBtns{
+.div_btn {
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -270,19 +185,19 @@ a{
 
 /* Estilos para contacto */
 
-.divContacto{
+.div_contenedor {
     width: 100%;
     margin-top: 2em;
 }
 
-.imgContacto{
+.imagen_contacto {
     width: 100%;
     height: 500px;
     object-fit: cover;
     object-position: center;
 }
 
-.divContacto3{
+.div_contacto {
     width: 35%;
     position: absolute;
     bottom: 0em;
@@ -291,14 +206,15 @@ a{
     flex-direction: column;
 }
 
-.paragraph_contacto{
+.paragraph_contacto {
     color: #503d09;
     padding: 1em;
     font-size: 20px;
     margin-top: 1em;
     text-align: justify;
 }
-.divIcons{
+
+.div_icons {
     width: 68%;
     margin: 1em auto;
     display: flex;
@@ -306,18 +222,19 @@ a{
     justify-content: space-between;
 
 }
-.p_icons{
+
+.stylo_icons {
     display: flex;
     flex-direction: row;
     width: auto;
     font-size: 50px;
     margin-top: 1em;
-   background-color: transparent;
+    background-color: transparent;
     color: #cbaa99c2;
 
 }
 
-.paragraph_icons{
+.paragraph_icons {
     color: #503d09;
     font-size: 15px;
     margin-top: 2em;
@@ -325,30 +242,27 @@ a{
 }
 
 
-.divIcons_paragraph{
+.divIcons_paragraph {
     display: flex;
     flex-direction: column;
     width: auto;
     margin-top: 2em;
     align-items: center;
 }
-.contenedor_home{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2em;
-}
 
-.doll{
-    width: 100%;
-    font-size: 50px;
-    color: #503d09;  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    justify-content: center;
-}
+
+.paragraph_contacto{
+    text-align: center;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 22px;
+  color: #503d09;
+} 
+ .titulo_contacto{
+    color: #503d09;
+    font-size: 27px;
+    margin: 1em 0;
+    text-align: center;
+} 
 
