@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import Login from "./form/Login";
+import {Link} from 'react-router-dom'
 import { contexto } from "../context/cartContext";
 import { useState } from "react";
 
@@ -21,7 +22,7 @@ const Cart = () => {
     return (
       <div className="cart">
         <h2 className="titulo_principal">Dolce Ragazza</h2>
-        <h3 className="pL">No hay productos en el carrito</h3>
+        <h3 className="paragraph_contacto">No hay productos en el carrito</h3>
       </div>
     )
   }
@@ -57,6 +58,7 @@ const Cart = () => {
           </table>
           <div className="div_btn">
             <button className="boton_vaciar" onClick={vaciarCarrito}> Vaciar Carrito </button>
+            <Link className="boton_vaciar" exact to={"/"}> <p className="paragraph_boton">Seguir Comprando</p></Link>
             <button className="boton_vaciar" onClick={() => setShowLogin(true)} > Comprar </button>
             <div>
               <h3 className="paragraph_tabla">Total: {cart.reduce((acc, item) => acc + item.articulo.price * item.cantidad, 0)}</h3>
