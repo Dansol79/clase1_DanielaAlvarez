@@ -3,7 +3,7 @@ import CardWiget from "../components/CardWiget";
 
 const Nav = () => {
   return (
-    <>
+    
       <header>
         <nav className="contenedor_nav" id="headerI">
           <Link to="/">
@@ -18,7 +18,7 @@ const Nav = () => {
           <CardWiget />
         </nav>
       </header>
-    </>
+    
   );
 };
 

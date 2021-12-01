@@ -17,15 +17,15 @@ const ItemDetail = ({ articulo }) => {
 
   return (
 
-    <div className="divDetail">
+    <div className="div_detail">
       <div>
-        <div className="divCardD">
+        <div className="contenedor_imagen">
           <img src={articulo.imagen} alt="imagPro" className="imgen_dateil" />
         </div>
       </div>
       <div className="div_desdcripcion">
         <div>
-        <h3 className="titulo_detail">{articulo.name}</h3>
+          <h3 className="titulo_detail">{articulo.name}</h3>
         </div>
         <p className="descripcion">{articulo.descripcion}</p>
         <div>
@@ -35,7 +35,8 @@ const ItemDetail = ({ articulo }) => {
 
       </div>
     </div>
-  );
-};
+  )
+}
+
 
 export default ItemDetail;

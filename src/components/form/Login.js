@@ -137,9 +137,7 @@ const Login = () => {
                      value={email}
                       />
                 </div>
-                {error ? <p className="error">Todos los campos son obligatorios</p> : null}
-
-             
+                {error ? <p className="error">Todos los campos son obligatorios</p> : null}           
                 <div className="login-button">
                     <button className="btn_login" type="submit">Enviar</button>
                 </div>

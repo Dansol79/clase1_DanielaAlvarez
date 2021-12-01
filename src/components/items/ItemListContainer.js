@@ -13,13 +13,13 @@ const ItemListContainer = (() => {
    useEffect(() => {
 
       const db = firestore
-      const collection =  db.collection("articulo")
+      const collection = db.collection("articulo")
 
       collection
          .get()
          .then((querySnapshot) => {
-           
-             setDatos(
+
+            setDatos(
                querySnapshot.docs.map((doc) => {
                   return { id: doc.id, ...doc.data() }
                })
@@ -36,7 +36,7 @@ const ItemListContainer = (() => {
    return (
       <div>
          <div>
-            <Slider/>
+            <Slider />
          </div>
          <ul className="divCardD">
             <ItemList datos={datos} />

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Login from "./form/Login";
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { contexto } from "../context/cartContext";
 import { useState } from "react";
 
@@ -11,13 +11,13 @@ const Cart = () => {
   const { clear } = useContext(contexto);
   const { remover } = useContext(contexto);
   const [showLogin, setShowLogin] = useState(false);
- 
- 
+
+
   const vaciarCarrito = () => {
     clear();
   };
-  
-  
+
+
   if (!showLogin && cart.length === 0) {
     return (
       <div className="cart">
