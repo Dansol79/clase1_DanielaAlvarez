@@ -84,7 +84,7 @@ const Login = () => {
         return(
           
             <>
-            <h2 className="titulo_principal">Dolde Ragazza</h2>
+            <h2 className="titulo_principal">Dolce Ragazza</h2>
             <div className="div_ticket">            
                 <h1 className="titulo_ticket">Tu compra se realizó con éxito</h1>
                 <p className="paragraph_ticket"> {nombre} - {apellido}</p>

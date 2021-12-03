@@ -20,7 +20,7 @@ const Cart = () => {
 
   if (!showLogin && cart.length === 0) {
     return (
-      <div className="cart">
+      <div className="div_cart_vacio">
         <h2 className="titulo_principal">Dolce Ragazza</h2>
         <h3 className="paragraph_contacto">No hay productos en el carrito</h3>
       </div>
@@ -29,33 +29,43 @@ const Cart = () => {
   return (
     <>
       {!showLogin &&
-        <div>
+        <div >
           <div>
             <h2 className="titulo_principal">Dolce Ragazza</h2>
           </div>
-          <table className="tabla">
-            <thead>
-              <tr>
-                <th className="paragraph_tabla">Producto</th>
-                <th className="paragraph_tabla">Nombre</th>
-                <th className="paragraph_tabla">Precio</th>
-                <th className="paragraph_tabla">Cant.</th>
-                <th className="paragraph_tabla">Sub.Total</th>
-              </tr>
-            </thead>
-            <tbody >
+          <div className="cart">
+            <div className="div_cart">
               {cart.map(item => (
-                <tr key={item.id}>
-                  <td><img src={item.articulo.imagen} alt={item.articulo.imagen} className="imagen_cart" /></td>
-                  <td className="paragraph_tabla">{item.articulo.name}</td>
-                  <td className="paragraph_tabla">{item.articulo.price}</td>
-                  <td className="paragraph_tabla">{item.cantidad}</td>
-                  <td className="paragraph_tabla">{item.articulo.price * item.cantidad}</td>
-                  <td><button className="btnCarrito" onClick={() => remover(item.articulo.name)}>X</button></td>
-                </tr>
+                <div key={item.id} className="div_cart_items">
+                  
+                  <div className="div_item_articulo">
+                    <div>
+                      <img src={item.articulo.imagen} alt={item.articulo.imagen} className="imagen_cart" />
+                    </div>
+                    <div className="div_item_articulo_texto">
+                    <div>
+                      <p className="paragraph_tabla">{item.articulo.name}</p>
+                    </div>
+                    <div>
+                      <p className="paragraph_tabla"> Precio: ${item.articulo.price}</p>
+                    </div>
+                    <div>
+                      <p className="paragraph_tabla"> Cant. {item.cantidad}</p>
+                    </div>
+                    <div>
+                      <p className="paragraph_tabla">Sub.Total ${item.articulo.price * item.cantidad}</p>
+                    </div>
+                    </div>
+                    <div>
+                      <button className="btnCarrito" onClick={() => remover(item.articulo.name)}>X</button>
+                    </div>
+                  </div>
+                  
+                </div>
               ))}
-            </tbody>
-          </table>
+            </div>
+          </div>
+
           <div className="div_btn">
             <button className="boton_vaciar" onClick={vaciarCarrito}> Vaciar Carrito </button>
             <Link className="boton_vaciar" exact to={"/"}> <p className="paragraph_boton">Seguir Comprando</p></Link>

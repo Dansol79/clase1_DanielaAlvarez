@@ -81,3 +81,9 @@
     position: absolute;
     justify-content: center;
 }
+
+@media screen and (max-width: 480px){
+    .contenedor_principal{
+       display: none;
+    }
+  }

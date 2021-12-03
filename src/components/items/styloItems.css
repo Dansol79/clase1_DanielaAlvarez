@@ -61,3 +61,32 @@
     background-color:#cbaa9944;
     box-shadow:   #cbaa99 -3px -3px -5px;
 }
+
+@media screen and (max-width: 600px) {
+    .divCard{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: solid 2px  #cbaa99c2;
+        box-shadow: #cbaa99c2 3px 3px 5px;
+    }
+    .stiloimg{
+        width: 100%;
+        height: 300px;
+        
+    }
+    .boton_vermas{
+        width: 40%;
+        display: block;
+        margin: 1em auto;
+        padding: .5em;
+        border-radius: 5px;
+        border:none;
+        font-size: 14px;
+        background-color:#cbaa9944;
+        box-shadow:   #cbaa99 -3px -3px -5px;
+    }
+}
