@@ -110,5 +110,10 @@
          align-items: center;
          margin-top: .5em;
          padding-right: 0;
+         border-top: 1px rgba(142, 153, 154, 0.5) solid;
+         background-color: rgb(127 140 141 / 20%);
+   }
+   .footer_titulo{
+       margin-top: 1em;
    }
 }
